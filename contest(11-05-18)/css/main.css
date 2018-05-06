@@ -1,3 +1,34 @@
 body {
 	background-color: #F1F1F1;
+	width: 100%;
+	margin-left: -0.5px;
+}
+ul {
+	list-style-type: none;
+}
+#prod {
+	margin-left: 100px;
+	margin-top: 100px;
+}
+#header {
+	background-color: #4B698B;
+	position: relative;
+	color: #FFF;
+	display: flex;
+}
+#header > ul {
+	display: inline-flex;
+	width: 300px;
+	position: fixed;
+	margin-left: 50%;
+	justify-content: space-around;
+}
+#header > li {
+}
+#try {
+	background-color: #417C81;
+	color: #FFF;
+	border: none;
+	width: 50px;
+	height: 25px;
 }

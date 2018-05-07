@@ -19,7 +19,7 @@ ul {
 #header > ul {
 	display: inline-flex;
 	width: 300px;
-	position: fixed;
+	position: absolute;
 	margin-left: 50%;
 	justify-content: space-around;
 }
@@ -29,6 +29,37 @@ ul {
 	background-color: #417C81;
 	color: #FFF;
 	border: none;
-	width: 50px;
-	height: 25px;
+	width: 100px;
+	height: 30px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#products {
+	width: 80%;
+	margin-left: 10%;
+	background-color: #f3f3f3;
+	padding-bottom: 50px;
+	border: solid 1px;
+	border-top: 0px;
+}
+#productsmenu {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.menupoint {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #000;
+}
+
+.active-element {
+	background-color: #d3d3d3;
+}
+.text {
+	width: 60%;
+	margin-left: 20%;
+	color: #000;
+	font-size: 20px;
 }

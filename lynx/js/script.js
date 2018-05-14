@@ -1,20 +1,15 @@
-
+var curSlide = 0;
+var slider;
 window.onload = function () {
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-    var curSlide = 0;
-    var slider = document.querySelectorAll('.slide');
+    slider = document.querySelectorAll('.slide');
     slider[0].classList.remove('hidden');
     
     setInterval( function () {
-        slider[curSlide].classList.add('hidden');
-        curSlide += 1;
-        if (curSlide > slider.length - 1) {
-            curSlide = 0;
-        }
-        slider[curSlide].classList.remove('hidden');
-    }, 4000);
+        changeSlide(slider, 1);
+    }, 8000);
 };
 
 
@@ -40,6 +35,17 @@ function loginPrompt(type, defaul) {
     return prompt(type, defaul);
 }
 
+function changeSlide(obj, val) { //-1 prev, 1 next
+    obj[curSlide].classList.add('hidden');
+    curSlide += val;
+    if (curSlide > obj.length - 1) {
+        curSlide = 0;
+    }
+    if (curSlide < 0) {
+        curSlide = obj.length - 1;
+    }
+    obj[curSlide].classList.remove('hidden');
+}
 
 function loginClick() {
     var userData = {
